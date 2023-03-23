@@ -6,8 +6,9 @@ var specialCharacters = "!@#$%^&*()_+~=<>{\}[]:;'?/-`,.|";
 
 function generatePassword() {
     var password = "";
+    var characters = ""
 
-    var passwordLength = prompt("How many characters do you want in your password? (Must be 8-128 characters)");
+    var passwordLength = prompt("How many characters do you want in your password? (Must be 8 to 128 characters)");
     if(passwordLength < 8 || passwordLength > 128) {
         alert("Password length must be a number between 8 and 128.");
         return "";
@@ -19,11 +20,10 @@ function generatePassword() {
     var includeSpecialCharacters = confirm("Do you want to include special characters?");
 
     if(!includeUpperCase && !includeLowerCase && !includeNumbers && !includeSpecialCharacters) {
-        alert("At least one character type must be selected.");
+        alert("At least one character type must be chosen.");
         return "";
     }
 
-    var characters = ""; 
     if(includeUpperCase) {
         characters += upperCase;
     }
