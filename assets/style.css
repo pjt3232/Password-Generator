@@ -1,3 +1,4 @@
+/*Universal selector for the entire page*/
 *,
 *::before,
 *::after {
@@ -12,15 +13,10 @@ body,
   padding: 0;
 }
 
+/*element selectors for body and header*/
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
-}
-
-.wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 header {
@@ -28,6 +24,13 @@ header {
   padding: 20px;
   padding-top: 0px;
   color: hsl(206, 17%, 28%);
+}
+
+/*class selectors*/
+.wrapper {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .card {
@@ -88,6 +91,7 @@ header {
   cursor: pointer;
 }
 
+/*creates styling for button*/
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
@@ -97,6 +101,7 @@ button[disabled] {
   float: right;
 }
 
+/*styling for text area*/
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,6 +123,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/*media queries for responsive design*/
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
